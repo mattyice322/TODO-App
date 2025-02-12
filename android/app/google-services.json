@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "873937533155",
+    "project_id": "to-do-app-final-hifrwc",
+    "storage_bucket": "to-do-app-final-hifrwc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873937533155:android:aaeb939f1f3238eb742dd6",
+        "android_client_info": {
+          "package_name": "com.mycompany.todoappfinal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMtr_Z3HjSJQhVfXdkYPhZfl7RGmabyf8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
