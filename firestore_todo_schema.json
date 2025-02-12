@@ -1,0 +1,91 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "users": {
+            "type": "object",
+            "patternProperties": {
+                "^[a-zA-Z0-9]{20,}$": {
+                    "type": "object",
+                    "properties": {
+                        "uid": {
+                            "type": "string",
+                            "description": "Unique identifier for the user, matches the Firestore document ID."
+                        },
+                        "display_name": {
+                            "type": "string",
+                            "description": "User's display name."
+                        },
+                        "email": {
+                            "type": "string",
+                            "format": "email",
+                            "description": "User's email address."
+                        },
+                        "photo_url": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "URL to the user's profile picture in Firebase Storage."
+                        },
+                        "birthdate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "User's birthdate stored as a Firestore timestamp."
+                        },
+                        "created_time": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Timestamp of when the user was created in Firestore."
+                        }
+                    },
+                    "required": [
+                        "uid",
+                        "display_name",
+                        "email",
+                        "created_time"
+                    ]
+                }
+            },
+            "additionalProperties": false
+        },
+        "tasks": {
+            "type": "object",
+            "patternProperties": {
+                "^[a-zA-Z0-9]{20,}$": {
+                    "type": "object",
+                    "properties": {
+                        "title": {
+                            "type": "string",
+                            "description": "Title of the task."
+                        },
+                        "details": {
+                            "type": "string",
+                            "description": "Detailed description of the task."
+                        },
+                        "completed": {
+                            "type": "boolean",
+                            "description": "Indicates if the task is completed."
+                        },
+                        "created": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Timestamp when the task was created."
+                        },
+                        "user": {
+                            "type": "string",
+                            "pattern": "^/users/[a-zA-Z0-9]{20,}$",
+                            "description": "Reference to the user who owns the task."
+                        }
+                    },
+                    "required": [
+                        "title",
+                        "completed",
+                        "created",
+                        "user"
+                    ]
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false
+}
