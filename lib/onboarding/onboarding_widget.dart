@@ -77,6 +77,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                 .override(
                                   fontFamily: 'Inter Tight',
                                   letterSpacing: 0.0,
+                                  fontWeight: FontWeight.bold,
                                 ),
                           ),
                         ],
