@@ -472,7 +472,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     textStyle: FlutterFlowTheme.of(context).titleLarge.override(
                           fontFamily: 'Inter Tight',
                           letterSpacing: 0.0,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w800,
                         ),
                     elevation: 0.0,
                     borderSide: const BorderSide(
