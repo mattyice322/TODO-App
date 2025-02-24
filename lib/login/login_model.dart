@@ -1,8 +1,13 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'login_widget.dart' show LoginWidget;
 import 'package:flutter/material.dart';
 
 class LoginModel extends FlutterFlowModel<LoginWidget> {
+  ///  Local state fields for this page.
+
+  String quoteText = 'Quote';
+
   ///  State fields for stateful widgets in this page.
 
   final formKey1 = GlobalKey<FormState>();
