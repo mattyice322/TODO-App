@@ -11,6 +11,9 @@ export 'completed_tasks_model.dart';
 class CompletedTasksWidget extends StatefulWidget {
   const CompletedTasksWidget({super.key});
 
+  static String routeName = 'completedTasks';
+  static String routePath = '/completedTasks';
+
   @override
   State<CompletedTasksWidget> createState() => _CompletedTasksWidgetState();
 }
@@ -59,7 +62,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget> {
                   },
                   child: Padding(
                     padding: MediaQuery.viewInsetsOf(context),
-                    child: const AddTaskWidget(),
+                    child: AddTaskWidget(),
                   ),
                 );
               },
@@ -74,7 +77,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget> {
               color: FlutterFlowTheme.of(context).primary,
               borderRadius: BorderRadius.circular(24.0),
               border: Border.all(
-                color: const Color(0xFF14181B),
+                color: Color(0xFF14181B),
                 width: 1.0,
               ),
             ),
@@ -86,13 +89,13 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget> {
           ),
         ),
         body: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 24.0),
+          padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 24.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                 child: Text(
                   'Completed Tasks',
                   style: FlutterFlowTheme.of(context).titleLarge.override(
@@ -135,7 +138,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget> {
                       padding: EdgeInsets.zero,
                       scrollDirection: Axis.vertical,
                       itemCount: listViewTasksRecordList.length,
-                      separatorBuilder: (_, __) => const SizedBox(height: 12.0),
+                      separatorBuilder: (_, __) => SizedBox(height: 12.0),
                       itemBuilder: (context, listViewIndex) {
                         final listViewTasksRecord =
                             listViewTasksRecordList[listViewIndex];
@@ -155,7 +158,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget> {
                   },
                 ),
               ),
-            ].divide(const SizedBox(height: 12.0)),
+            ].divide(SizedBox(height: 12.0)),
           ),
         ),
       ),
